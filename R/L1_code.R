@@ -48,7 +48,15 @@ rownames(USairpollution)[which.max(USairpollution$SO2)]
 max(USairpollution$SO2)
 
 # --------------------------------------------------------------------------
-#    Put a column in order: sort(), order(), rank()
+#  One picture, before we have any formula
+# --------------------------------------------------------------------------
+
+plot(USairpollution$temp, USairpollution$precip,
+     xlab = "average annual temperature (F)",
+     ylab = "average annual rainfall (inches)")
+
+# --------------------------------------------------------------------------
+#  Appendix A - Put a column in order: sort(), order(), rank() and pmin()
 # --------------------------------------------------------------------------
 
 # Albany, Albuquerque, Atlanta, Baltimore, Buffalo
@@ -77,7 +85,7 @@ rank(wind)[wind == 10.9]   # an odd-sized tie: a WHOLE number, still a tie
 n  <- nrow(USairpollution)
 rd <- rank(-so2)                   # rank 1 = LARGEST (the Section 1 end)
 rd["Chicago"]
-all.equal(rd, n + 1 - rank(so2))   # the same thing, computed two ways
+all.equal(rd, n + 1 - rank(so2))   # TRUE means all 41 agree, not just one
 
 a <- c(3, 9, 2)
 b <- c(5, 1, 8)
@@ -88,11 +96,3 @@ pmin(a, b)   # one per position -- the same idea, for minima
 
 r <- 1:7
 rbind(r = r, "8 - r" = 8 - r, e = pmin(r, 8 - r))
-
-# --------------------------------------------------------------------------
-#  One picture, before we have any formula
-# --------------------------------------------------------------------------
-
-plot(USairpollution$temp, USairpollution$precip,
-     xlab = "average annual temperature (F)",
-     ylab = "average annual rainfall (inches)")

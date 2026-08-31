@@ -42,9 +42,9 @@ dim(X)
 #  Step 3 - Getting at the data
 # --------------------------------------------------------------------------
 
-wh[1:3, c("country", "life_exp", "fertility")]   # 3 rows, 3 named columns
+wh[1:3, c("country", "life_exp", "fertility")]   # 3 rows, 3 columns
 
-wh$life_exp[1:5]               # the life_exp column, then its first 5 entries
+wh$life_exp[1:5]        # that column, then its first 5 entries
 
 wh[wh$life_exp > 84, c("country", "life_exp", "pop65")]
 
@@ -52,13 +52,13 @@ wh[wh$life_exp > 84, c("country", "life_exp", "pop65")]
 #  Step 4 - apply(), and a question it answers wrongly
 # --------------------------------------------------------------------------
 
-round(apply(X, 2, mean), 2)    # MARGIN = 2  ->  work down each COLUMN
+round(apply(X, 2, mean), 2)    # MARGIN = 2 -> work down each COLUMN
 
 round(apply(X, 2, sd), 2)      # the eight standard deviations
 
 round(diag(cov(X)), 1)
 
-round(100 * diag(cov(X)) / sum(diag(cov(X))), 3)     # percent of the total
+round(100 * diag(cov(X)) / sum(diag(cov(X))), 3)   # percent of total
 
 # --------------------------------------------------------------------------
 #  Step 5 - One line, and what it catches
@@ -69,7 +69,7 @@ describe(wh[, c("life_exp", "gdp_pc", "internet_pct")])
 
 wh[wh$life_exp < 40, c("country", "life_exp", "infant_mort")]
 
-ok <- wh$life_exp > 40                       # everything except the bad row
+ok <- wh$life_exp > 40            # everything except the bad row
 round(c(all = cor(wh$life_exp, wh$infant_mort),
         ok  = cor(wh$life_exp[ok], wh$infant_mort[ok])), 3)
 
@@ -100,6 +100,7 @@ round(zq, 2)
 # --------------------------------------------------------------------------
 
 pdf("figures/L3_life_pop65.pdf", width = 6, height = 4.2)
+par(mar = c(4.2, 4.2, 0.6, 0.6))  # margins in lines: b, l, t, r
 plot(wh$life_exp, wh$pop65, pch = 21, bg = "grey80", col = "grey30",
      xlab = "life expectancy at birth (years)",
      ylab = "population aged 65+ (%)")

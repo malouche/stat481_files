@@ -34,7 +34,6 @@ X <- matrix(c(2, 8,
               6, 12), ncol = 2, byrow = TRUE)   # byrow: fill row by row
 colMeans(X)
 cov(X)          # divides by n - 1
-
 cor(X)
 
 # --------------------------------------------------------------------------
@@ -42,8 +41,6 @@ cor(X)
 # --------------------------------------------------------------------------
 
 round(diag(cov(W)), 1)         # the eight sample variances
-
-round(cov(W[, c("life_exp", "infant_mort", "gdp_pc")]), 1)
 
 # --------------------------------------------------------------------------
 #  R, and the answer to today's question
@@ -60,16 +57,22 @@ library(corrplot)
 corrplot.mixed(cor(W), upper = "ellipse", lower = "number")
 
 # --------------------------------------------------------------------------
-#    What "scale-free" does and does not mean (read at home; Home Exercise 3)
-# --------------------------------------------------------------------------
-
-cor(W$gdp_pc,        W$internet_pct)
-cor(W$gdp_pc / 1000, W$internet_pct)   # a = 1/1000, positive
-cor(-W$gdp_pc,       W$internet_pct)   # a = -1,     negative
-
-# --------------------------------------------------------------------------
 #  One number for the whole spread: the generalized variance
 # --------------------------------------------------------------------------
 
 det(cov(W))     # generalized variance of the raw data
 det(cor(W))     # the same thing for the standardised data
+
+# --------------------------------------------------------------------------
+#    A.2Covariance off the diagonal, and the units it carries
+# --------------------------------------------------------------------------
+
+round(cov(W[, c("life_exp", "infant_mort", "gdp_pc")]), 1)
+
+# --------------------------------------------------------------------------
+#    A.3What "scale-free" does and does not mean
+# --------------------------------------------------------------------------
+
+cor(W$gdp_pc,        W$internet_pct)
+cor(W$gdp_pc / 1000, W$internet_pct)   # a = 1/1000, positive
+cor(-W$gdp_pc,       W$internet_pct)   # a = -1,     negative
