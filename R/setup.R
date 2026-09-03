@@ -8,8 +8,8 @@
 ##
 ##  GENERATED FILE — do not edit by hand.  It is written by
 ##  make_stat481_files.py from the instructor's package map, so the list below
-##  is always the same one the lectures were built against.  25 packages,
-##  generated 31 Aug 2026.
+##  is always the same one the lectures were built against.  26 packages,
+##  generated 02 Sep 2026.
 ## ─────────────────────────────────────────────────────────────────────────────
 
 ## package -> the lecture that introduces it
@@ -26,7 +26,8 @@ STAT481_PACKAGES <- c(
   ggplot2          = "L4",
   seriation        = "L4A",
   palmerpenguins   = "L4",
-  car              = "L5",
+  car              = "L13",
+  pheatmap         = "L5",
   MASS             = "L6",
   mvtnorm          = "L11",
   MVN              = "L13",

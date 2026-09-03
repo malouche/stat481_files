@@ -41,11 +41,33 @@ back to step 3.
 | `00_syllabus/` | the syllabus |
 | `01_lectures/` | lecture notes, numbered in the order they are taught |
 | `02_worksheets/` | the in-class worksheets |
-| `03_labs/` | the R lab briefs |
+| `03_assessments/` | the R lab briefs and, later, sample quizzes |
+| `04_practice_sheets/` | the in-class practice sheets (student copies; corrected in class) |
 | `data/` | the frozen CSVs, each with a codebook |
-| `R/` | `setup.R` |
+| `R/` | `setup.R`, and one script per lecture holding that lecture's code |
 
 Filenames carry the session date, so the folder sorts into teaching order.
+
+## The lecture code
+
+`R/L1_code.R` ... `R/L5_code.R` hold **every code block printed in that
+lecture's notes, in the same order**. They are extracted from the notes
+themselves, so the script and the PDF cannot disagree: if a line is in the
+script, it was on the page in front of you.
+
+Each one runs top to bottom in a fresh session, from the project root:
+
+```r
+source("R/L2_code.R")
+```
+
+Reading it is not the point — running it a block at a time, next to the PDF, is.
+Change a number and see what moves. `R/L4_code.R` and `R/L5_code.R` each
+include their lecture's appendix, which is required reading; that code needs
+objects the body defines, so the two stay in one file.
+
+Nothing here is a worksheet answer. The worksheet code lives in the worksheet
+keys and is released on Blackboard on the schedule in the syllabus.
 
 ## About the packages
 
