@@ -9,7 +9,7 @@
 ##  GENERATED FILE — do not edit by hand.  It is written by
 ##  make_stat481_files.py from the instructor's package map, so the list below
 ##  is always the same one the lectures were built against.  26 packages,
-##  generated 02 Sep 2026.
+##  generated 05 Sep 2026.
 ## ─────────────────────────────────────────────────────────────────────────────
 
 ## package -> the lecture that introduces it

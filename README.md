@@ -102,7 +102,9 @@ source by a script that verifies each file before copying it, so what you have
 always matches what was taught.
 
 **Solutions, answer keys, quizzes and exams are never in this folder.** Those
-are released through Blackboard, on the schedule in the syllabus.
+are released through Blackboard, on the schedule in the syllabus. The sample
+quiz before each quiz is the exception: its student copy sits in
+`03_assessments/` so you can try it before the correction session.
 
 ## Using an AI assistant
 

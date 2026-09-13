@@ -1,6 +1,6 @@
 # MANIFEST — stat481_files
 
-Built 02 Sep 2026, 13:31 by `make_stat481_files.py`. Every PDF below passed four gates:
+Built 05 Sep 2026, 07:49 by `make_stat481_files.py`. Every PDF below passed four gates:
 
 1. **filename** — does not look like restricted material
 2. **watermark** — its text does not contain *MASTER SOLUTION* / *not for distribution* (every instructor build carries that header)
@@ -21,14 +21,15 @@ Built 02 Sep 2026, 13:31 by `make_stat481_files.py`. Every PDF below passed four
 | PDF | `02_worksheets/Worksheet3_Aug30.pdf` | 3 pages | `e64aacc24e22` |
 | PDF | `02_worksheets/Worksheet4_Sep01.pdf` | 4 pages | `4621aafe7a9e` |
 | PDF | `03_assessments/RLab1_out_Sep03_due_Sep17.pdf` | 7 pages | `b531f357349a` |
-| PDF | `04_practice_sheets/PracticeSheet1_Sep06.pdf` | 6 pages | `a17387f2b2af` |
+| PDF | `03_assessments/SampleQuiz1_Sep08.pdf` | 8 pages | `753389096498` |
+| PDF | `04_practice_sheets/PracticeSheet1_Sep06.pdf` | 6 pages | `1578f393b3d8` |
 | data | `data/worldhealth2022.csv` | 19.7 KB | `a1faec630864` |
 | data | `data/whwide2022.csv` | 68.3 KB | `d0ad10468d42` |
 | project | `STAT481.Rproj` | 0.3 KB | `5c331e4d5a4f` |
-| R | `R/setup.R` | 26 packages | `9c0dbab4b15e` |
+| R | `R/setup.R` | 26 packages | `ef181e9b9fb2` |
 | data | `data/worldhealth2022_CODEBOOK.md` | codebook | `42a690e332ea` |
 | data | `data/whwide2022_CODEBOOK.md` | codebook | `4e64a1953624` |
-| meta | `README.md` |  | `f911bf68bac8` |
+| meta | `README.md` |  | `85500bd60994` |
 | meta | `.gitignore` |  | `526287683776` |
 | R | `R/L1_code.R` | 16 blocks | `97cacedf5715` |
 | R | `R/L2_code.R` | 9 blocks | `0df10985fb12` |
@@ -38,7 +39,7 @@ Built 02 Sep 2026, 13:31 by `make_stat481_files.py`. Every PDF below passed four
 
 ## Not in this folder, on purpose
 
-- **Every answer key, solution, quiz, sample quiz, midterm and final.**
+- **Every answer key, solution, quiz, midterm and final.** The one exception is the STUDENT copy of each sample quiz, which is posted for the correction session; its key is not.
 - **Stages 2-7.** Drafted 18-20 Aug 2026, before the depth upgrade; each is added here as its rebuild and audit close.
 - **The eight assessment data panels.** Shipping them would tell students which data the quizzes are built on.
 - **The instructor codebooks.** They are design documents: `whwide2022`'s names all eight assessment panels, and `worldhealth2022`'s publishes the L5 Mahalanobis ranking and the L7 eigenvector result before either lecture is taught. The two codebooks here were written fresh for students.
